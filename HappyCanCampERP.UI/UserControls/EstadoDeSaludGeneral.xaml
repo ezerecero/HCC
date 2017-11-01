@@ -1,0 +1,103 @@
+﻿<UserControl x:Class="HappyCanCampERP.UI.UserControls.EstadoDeSaludGeneral"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controles="clr-namespace:HappyCanCampERP.UI.UserControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <BooleanToVisibilityConverter x:Key="B2V" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Margin="16"
+          VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <!--Estado de salud general-->
+        <materialDesign:ColorZone Grid.Row="0"
+                                  Grid.Column="3"
+                                  Grid.ColumnSpan="3"
+                                  Mode="PrimaryLight"
+                                  Padding="16"
+                                  Margin="0,20,0,10">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <TextBlock VerticalAlignment="Center"
+                           Margin="16 0 0 0">Estado de salud general</TextBlock>
+            </StackPanel>
+        </materialDesign:ColorZone>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="4">
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Dificutad para subir escaleras" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Dificultad al saltar" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Rigidez o cojeras" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Cambio conductual a negativo" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Incremento de sed" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Incremento de veces al orinar" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Cambio en nivel de actividad" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Jadeo excesivo" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Cambio en patron respiratorio" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Tos" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Movimientos circulares o repetitivos" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Confusión o desorientación" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Ladridos excesivos" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Menos interacción con la familia" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Disminución en capacidad de respuesta" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Cambios en piel o pelo" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Azotes o golpes recibidos" />
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="4"
+                    Grid.ColumnSpan="4">
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Rascarse excesivamente" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Cambios en patrones de sueño" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Saludos menos entusiastas" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Incremento de apetito" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Disminución de apetito" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Vómitos" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Cambios en la heces" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Problemas al defecar" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Pérdida de peso" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Incremento de peso" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Dificultad para escuchar" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Problemas de visión" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Diarrea" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Ha tenido pulgas o garrapatas" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Bultos o protuberancias" />
+            <controles:ToggleButtonPuntoDeSaludConTiempo Texto="Mal aliento" />
+        </StackPanel>
+        <TextBox Grid.Row="2"
+                 Grid.Column="3"
+                 Grid.ColumnSpan="4"
+                 Grid.RowSpan="2"
+                 Style="{StaticResource MaterialDesignTextAreaTextBox}"
+                 Margin="0,0,0,0"
+                 VerticalAlignment="Top"
+                 Height="100"
+                 AcceptsReturn="True"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 materialDesign:HintAssist.Hint="Otros"
+                 IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignTextAreaTextBoxEnabledComboBox}" />
+    </Grid>
+</UserControl>

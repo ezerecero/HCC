@@ -1,0 +1,375 @@
+﻿<UserControl x:Class="HappyCanCampERP.UI.UserControls.Cliente"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:viewModels="clr-namespace:HappyCanCampERP.ViewModels;assembly=HappyCanCampERP.ViewModels"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance viewModels:ClienteViewModel}"
+             d:DesignWidth="800"
+             Grid.IsSharedSizeScope="True"
+             RenderTransformOrigin="0.5,0.5">
+    <Grid Margin="16"
+          VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <materialDesign:ColorZone Mode="Accent"
+                                  Padding="16"
+                                  Grid.ColumnSpan="6">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Grid.Row="0"
+                           Grid.Column="0"
+                           Style="{StaticResource MaterialDesignTitleTextBlock}"
+                           Margin="0 6 0 8">Cliente</TextBlock>
+            </StackPanel>
+        </materialDesign:ColorZone>
+        <materialDesign:PackIcon Grid.Row="1"
+                                 Grid.Column="0"
+                                 Kind="Account"
+                                 Foreground="{Binding ElementName=NombreTextBox, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+
+        <TextBox Grid.Row="1"
+                 Grid.Column="1"
+                 x:Name="NombreTextBox"
+                 materialDesign:HintAssist.Hint="Nombre"
+                 Text="{Binding Nombre, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}">
+
+        </TextBox>
+        <materialDesign:PackIcon Grid.Row="2"
+                                 Grid.Column="0"
+                                 Kind="Email"
+                                 Foreground="{Binding ElementName=Correo, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <TextBox Grid.Row="2"
+                 Grid.Column="1"
+                 x:Name="Correo"
+                 materialDesign:HintAssist.Hint="e-mail"
+                 Text="{Binding Correo, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        <materialDesign:PackIcon Grid.Row="3"
+                                 Grid.Column="0"
+                                 Kind="Phone"
+                                 Foreground="{Binding ElementName=Telefono, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <TextBox Grid.Row="3"
+                 Grid.Column="1"
+                 x:Name="Telefono"
+                 materialDesign:HintAssist.Hint="Telefono"
+                 Text="{Binding Telefono, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        <materialDesign:PackIcon Grid.Row="4"
+                                 Grid.Column="0"
+                                 Kind="Cellphone"
+                                 Foreground="{Binding ElementName=Celular, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <TextBox Grid.Row="4"
+                 Grid.Column="1"
+                 x:Name="Celular"
+                 materialDesign:HintAssist.Hint="Celular"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        <materialDesign:PackIcon Grid.Row="5"
+                                 Grid.Column="0"
+                                 Kind="Road"
+                                 Foreground="{Binding ElementName=Calle, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <TextBox Grid.Row="5"
+                 Grid.Column="1"
+                 x:Name="Calle"
+                 materialDesign:HintAssist.Hint="Calle"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        <materialDesign:PackIcon Grid.Row="1"
+                                 Grid.Column="2"
+                                 Kind="Numeric0Box"
+                                 Foreground="{Binding ElementName=NumeroExterior, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <Grid Grid.Row="1"
+              Grid.Column="3"
+              HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Row="0"
+                     Grid.Column="0"
+                     x:Name="NumeroExterior"
+                     materialDesign:HintAssist.Hint="Numero exterior"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     Margin="0,0,5,0" />
+            <TextBox Grid.Row="0"
+                     Grid.Column="1"
+                     materialDesign:HintAssist.Hint="Numero interior"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     Margin="5,0,0,0" />
+        </Grid>
+        <TextBox Grid.Row="2"
+                 Grid.Column="3"
+                 x:Name="Fraccionamiento"
+                 materialDesign:HintAssist.Hint="Fraccionamiento"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        <materialDesign:PackIcon Grid.Row="3"
+                                 Grid.Column="2"
+                                 Kind="City"
+                                 Foreground="{Binding ElementName=PhoneTextBox, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <TextBox Grid.Row="3"
+                 Grid.Column="3"
+                 x:Name="Colonia"
+                 materialDesign:HintAssist.Hint="Colonia"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        <materialDesign:PackIcon Grid.Row="4"
+                                 Grid.Column="2"
+                                 Kind="AccountLocation"
+                                 Foreground="{Binding ElementName=Localidad, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <TextBox Grid.Row="4"
+                 Grid.Column="3"
+                 x:Name="Localidad"
+                 materialDesign:HintAssist.Hint="Localidad"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+
+        <materialDesign:PackIcon Grid.Row="5"
+                                 Grid.Column="2"
+                                 Kind="MapMarkerCircle"
+                                 Foreground="{Binding ElementName=DelegacionMunicipio, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <TextBox Grid.Row="5"
+                 Grid.Column="3"
+                 x:Name="DelegacionMunicipio"
+                 materialDesign:HintAssist.Hint="Delegación o municipio."
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+
+        <materialDesign:PackIcon Grid.Row="1"
+                                 Grid.Column="4"
+                                 Kind="MapMarkerPlus"
+                                 Foreground="{Binding ElementName=Estado, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <TextBox Grid.Row="1"
+                 Grid.Column="5"
+                 x:Name="Estado"
+                 materialDesign:HintAssist.Hint="Estado"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+
+        <materialDesign:PackIcon Grid.Row="2"
+                                 Grid.Column="4"
+                                 Kind="ContactMail"
+                                 Foreground="{Binding ElementName=PhoneTextBox, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <TextBox Grid.Row="2"
+                 Grid.Column="5"
+                 x:Name="CP"
+                 materialDesign:HintAssist.Hint="CP"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+
+        <materialDesign:PackIcon Grid.Row="3"
+                                 Grid.Column="4"
+                                 Kind="GoogleMaps"
+                                 Foreground="{Binding ElementName=PhoneTextBox, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <TextBox Grid.Row="3"
+                 Grid.Column="5"
+                 x:Name="Geo"
+                 materialDesign:HintAssist.Hint="Geo"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+
+        <materialDesign:PackIcon Grid.Row="4"
+                                 Grid.Column="4"
+                                 Kind="Comment"
+                                 Foreground="{Binding ElementName=PhoneTextBox, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <TextBox Grid.Row="4"
+                 Grid.Column="5"
+                 x:Name="Comentarios"
+                 materialDesign:HintAssist.Hint="Comentarios"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+
+        <materialDesign:PackIcon Grid.Row="5"
+                                 Grid.Column="4"
+                                 Kind="FileDocumentBox"
+                                 Foreground="{Binding ElementName=RFC, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <TextBox Grid.Row="5"
+                 Grid.Column="5"
+                 x:Name="RFC"
+                 materialDesign:HintAssist.Hint="RFC"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+
+        <materialDesign:PackIcon Grid.Row="4"
+                                 Grid.Column="4"
+                                 Kind="GoogleMaps"
+                                 Foreground="{Binding ElementName=CommentTextBox, Path=BorderBrush}"
+                                 Margin="0,20,0,0"
+                                 HorizontalAlignment="Right"
+                                 Visibility="Hidden" />
+    </Grid>
+</UserControl>

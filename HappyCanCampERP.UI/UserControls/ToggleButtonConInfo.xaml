@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="HappyCanCampERP.UI.UserControls.ToggleButtonConInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             d:DesignHeight="50"
+             d:DesignWidth="500">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <BooleanToVisibilityConverter x:Key="b2v" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid  MinWidth="500">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <ToggleButton Grid.Column="0"
+                      Style="{StaticResource MaterialDesignSwitchAccentToggleButton}"
+                      VerticalAlignment="Center"
+                      Margin="8,10"
+                      Name="EstadoDeToggleButtonConInfo" />
+        <TextBlock TextWrapping="Wrap" Grid.Column="1"
+                   x:Name="TextoDelToggle"
+                   Margin="5,0"
+                   VerticalAlignment="Center">Texto del Check</TextBlock>
+        <!--En el caso de este control se tuvo que enlazar a otra propiedad (Tag) del control para
+        poder tener acceso mendiante el binding al control, es decir se accesa mediante el Tag que 
+        guarda un objeto y este se enlazo a la propiedad Hint que no es accesible para poder obtener
+        la leyenda desde afuera-->
+        <TextBox Grid.Column="2"
+                 Tag="Desde el tag"
+                 x:Name="TextBlockInfo"
+                 materialDesign:HintAssist.Hint="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 Visibility="{Binding IsChecked,ElementName=EstadoDeToggleButtonConInfo,Converter={StaticResource b2v}}"
+                 VerticalAlignment="Center"
+                 Margin="20,0,0,10" />
+    </Grid>
+</UserControl>

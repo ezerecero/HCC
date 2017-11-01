@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="HappyCanCampERP.UI.Modulos.Registro"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:userControls="clr-namespace:HappyCanCampERP.UI.UserControls"
+             mc:Ignorable="d">
+    <ScrollViewer>
+
+        <StackPanel>
+            <!-- To DO: Aqui estoy añadiendo los controles manuelmante, pero por codigo en el view model tego  que vel la mandera de cargarlos de dos formas:
+        Promero: Vacios para que se pueda anadir un cliente nuevo o registrar cliente nuevo ocn sus respectivas mascotas
+        Segundo: De otra ventana o control que tenga una lista de los clientes y despues de que sa haya hecho una busqueda entoces que tenga un boton que diga cargar informacion y habra esta ventana con los datos cargados para que se pueda modificar, e incluso añadir una mascota-->
+            <userControls:InformacionDeEntrenamientoFamiliar></userControls:InformacionDeEntrenamientoFamiliar>
+            <userControls:ComoSeQuedaTuCanEnCasa></userControls:ComoSeQuedaTuCanEnCasa>
+            <userControls:Cliente></userControls:Cliente>
+            <userControls:Mascota></userControls:Mascota>
+            <userControls:ComoObtuvoSuCan></userControls:ComoObtuvoSuCan>
+            <userControls:ComoFueCriadoSuCan></userControls:ComoFueCriadoSuCan>
+            <userControls:InformacionVeterinaria></userControls:InformacionVeterinaria>
+            <userControls:EstadoDeSaludGeneral></userControls:EstadoDeSaludGeneral>
+            <userControls:InformacionAlimenticia></userControls:InformacionAlimenticia>
+            <userControls:InformacionDePrevencion></userControls:InformacionDePrevencion>
+            <userControls:InformacionDeEnfermedades></userControls:InformacionDeEnfermedades>
+            <userControls:PersonalAdicionalUrgencias></userControls:PersonalAdicionalUrgencias>
+
+            <!--La funcionalidad de este boton sera la de tomar la lista de mascotas y agregar una y asegurarse que sus datos se vean en cada una y esten enlazados y se puedan actualizar. UFF espero que MVVM haga facil eso-->
+            <!--Bueno y ya pensando esto mejor despues de las visitas a Happy Can Camp y de acuerdo a los 
+            formatos y operación veo que es necesario que lo primero que haga esta forma es preguntar 
+            si el cliente es nuevo o ya esta registrado por que tal vez ya habia tenido otra mascota,
+            por que el caso de esta pagina o forma es la de registrar una mascota nueva, asi que despues 
+            de que se haya confrimado si el cliente es nuevo o no, entoces se procede abuscar en caso 
+            de que este registrado y si se encuentra se jalan sus datos, se revisan y se procede a 
+            llenar los datos del nuevo perro, recalco que esta seccion es para registrar un perro que llega por primera vez.-->
+            <Button HorizontalAlignment="Center"
+                    Content="Agregar mascota"
+                    Margin="0,0,-4,0"></Button>
+        </StackPanel>
+    </ScrollViewer>
+
+</UserControl>
+
+
+

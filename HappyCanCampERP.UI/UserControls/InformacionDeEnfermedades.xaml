@@ -1,0 +1,149 @@
+﻿<UserControl x:Class="HappyCanCampERP.UI.UserControls.InformacionDeEnfermedades"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:userControls="clr-namespace:HappyCanCampERP.UI.UserControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             d:DesignWidth="800">
+    <Grid Margin="16"
+          VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <materialDesign:ColorZone Grid.Row="0"
+                                  Grid.Column="3"
+                                  Grid.ColumnSpan="3"
+                                  Mode="PrimaryLight"
+                                  Padding="16"
+                                  Margin="0,20,0,0">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <TextBlock VerticalAlignment="Center"
+                           Margin="16 0 0 0">Información de enfermedades</TextBlock>
+            </StackPanel>
+        </materialDesign:ColorZone>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="4">
+           
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Infección de oidos"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Alergias de piel"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Infecciones en piel"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Sarna"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Gastritis"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Gastroenteritis"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Infecciones de vejiga o cistitis"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Artritis"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Golpes en tejidos blandos"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Tumores benignos"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Infecciones oculares"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Hígado"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Riñones"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Cadera"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Dilatación gástrica"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Ingerir cuerpos extraños"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Problema de hernia lumbar"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Problema de hernia cervical"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="4"
+                    Grid.ColumnSpan="4">
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Corte de cola y orejas"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Epilepsia"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Cataratas"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Hiperactividad"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Diabetes"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Sordera"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Depresión"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Cáncer"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Eclampsia (hembras)"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Problemas bucales"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Ataques de pánico"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Ceguera"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Podo dermatitis"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Displasia de cadera"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Tos de perrera"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Moquillo"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+            <userControls:ToggleButtonConInfo TextoDelToggleButton="Soplo"
+                                           TextoDelInfo="Nota"></userControls:ToggleButtonConInfo>
+
+        </StackPanel>
+        <materialDesign:ColorZone Grid.Row="2"
+                                  Grid.Column="3"
+                                  Grid.ColumnSpan="3"
+                                  Mode="PrimaryLight"
+                                  Padding="16"
+                                  Margin="0,20">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <TextBlock VerticalAlignment="Center"
+                           Margin="16 0 0 0">Infirmación de enfermedades</TextBlock>
+            </StackPanel>
+        </materialDesign:ColorZone>
+        <TextBox Grid.Row="3"
+                 Grid.Column="3"
+                 Grid.ColumnSpan="4"
+                 Grid.RowSpan="2"
+                 Style="{StaticResource MaterialDesignTextAreaTextBox}"
+                 Margin="0,0,0,0"
+                 VerticalAlignment="Top"
+                 Height="100"
+                 AcceptsReturn="True"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 materialDesign:HintAssist.Hint="En caso de alguna cirugía, indicar cuál y causas"
+                 IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignTextAreaTextBoxEnabledComboBox}" />
+
+    </Grid>
+</UserControl>

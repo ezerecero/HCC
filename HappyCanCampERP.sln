@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyCanCampERP.UI", "HappyCanCampERP.UI\HappyCanCampERP.UI.csproj", "{455639AA-E675-47B1-8290-13391B1AEEF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyCanCampERP.Data", "HappyCanCampERP.Data\HappyCanCampERP.Data.csproj", "{588513D8-7466-433D-862F-DEDCB19E3E41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyCanCampERP.Domain", "HappyCanCampERP.Domain\HappyCanCampERP.Domain.csproj", "{FB963167-C0C6-466D-9660-825898B0CBEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnaSolucionDigital.Validador", "UnaSolucionDigital.Validador\UnaSolucionDigital.Validador.csproj", "{DCA45560-99A7-4320-98BB-F34AF961A5F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyCanCampERP.ViewModels", "HappyCanCampERP.ViewModels\HappyCanCampERP.ViewModels.csproj", "{E9ADB490-984E-4254-8958-0BBE1E12BDD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{455639AA-E675-47B1-8290-13391B1AEEF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{455639AA-E675-47B1-8290-13391B1AEEF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{455639AA-E675-47B1-8290-13391B1AEEF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{455639AA-E675-47B1-8290-13391B1AEEF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{588513D8-7466-433D-862F-DEDCB19E3E41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{588513D8-7466-433D-862F-DEDCB19E3E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{588513D8-7466-433D-862F-DEDCB19E3E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{588513D8-7466-433D-862F-DEDCB19E3E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB963167-C0C6-466D-9660-825898B0CBEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB963167-C0C6-466D-9660-825898B0CBEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB963167-C0C6-466D-9660-825898B0CBEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB963167-C0C6-466D-9660-825898B0CBEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCA45560-99A7-4320-98BB-F34AF961A5F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA45560-99A7-4320-98BB-F34AF961A5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCA45560-99A7-4320-98BB-F34AF961A5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCA45560-99A7-4320-98BB-F34AF961A5F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9ADB490-984E-4254-8958-0BBE1E12BDD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9ADB490-984E-4254-8958-0BBE1E12BDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9ADB490-984E-4254-8958-0BBE1E12BDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9ADB490-984E-4254-8958-0BBE1E12BDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24DF71E4-ADE5-4407-9A72-DE8F720733D8}
+	EndGlobalSection
+EndGlobal

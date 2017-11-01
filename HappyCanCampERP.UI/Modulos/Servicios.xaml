@@ -1,0 +1,134 @@
+﻿<UserControl x:Class="HappyCanCampERP.UI.Modulos.Servicios"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             
+             xmlns:controles="clr-namespace:HappyCanCampERP.UI"
+             mc:Ignorable="d">
+    <Grid Margin="16"
+          VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <materialDesign:ColorZone Mode="Light"
+                                  Padding="16"
+                                  Grid.ColumnSpan="4">
+            <DockPanel>
+                <StackPanel Orientation="Horizontal"
+                            materialDesign:RippleAssist.IsCentered="True">
+                    
+                    <materialDesign:ColorZone Mode="Standard"
+                                              Padding="8 4 8 4"
+                                              CornerRadius="2"
+                                              Panel.ZIndex="1"
+                                              Margin="16 0 0 0"
+                                              materialDesign:ShadowAssist.ShadowDepth="Depth1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button Style="{DynamicResource MaterialDesignToolButton}">
+                                <materialDesign:PackIcon Kind="Magnify"
+                                                         Opacity=".56" />
+                            </Button>
+                            <TextBox Grid.Column="1"
+                                     Margin="8 0 0 0"
+                                     materialDesign:HintAssist.Hint="Build a search bar"
+                                     materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                                     BorderThickness="0"
+                                     MinWidth="200"
+                                     VerticalAlignment="Center" />
+                            <Button Style="{DynamicResource MaterialDesignToolButton}"
+                                    Grid.Column="2" />
+                        </Grid>
+                    </materialDesign:ColorZone>
+                    <Button Style="{DynamicResource MaterialDesignToolForegroundButton}"
+                            Margin="8 0 0 0"
+                            Panel.ZIndex="0">
+                        <materialDesign:PackIcon Kind="Send" />
+                    </Button>
+                </StackPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
+        <materialDesign:PackIcon Grid.Row="1"
+                                 Grid.Column="0"
+                                 Kind="StarCircle"
+                                 Foreground="{Binding ElementName=PhoneTextBox, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <materialDesign:PackIcon Grid.Row="2"
+                                 Grid.Column="2"
+                                 Kind="FormatListBulletedType"
+                                 Foreground="{Binding ElementName=PhoneTextBox, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <ScrollViewer VerticalScrollBarVisibility="Auto"
+                      Grid.Column="1"
+                      Grid.Row="1"
+                      Grid.RowSpan="4">
+           
+        </ScrollViewer>
+        <TextBlock Grid.Row="1"
+                   Grid.Column="3"
+                   Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                   Margin="0,10,0,0">Seleccionar servicios</TextBlock>
+        <ComboBox Grid.Column="3"
+                  Grid.Row="2">
+            <CheckBox>Medico</CheckBox>
+            <CheckBox>Estética</CheckBox>
+            <CheckBox>Resguardo</CheckBox>
+            <CheckBox>Entrenamiento</CheckBox>
+            <CheckBox>Hospedale</CheckBox>
+        </ComboBox>
+        <StackPanel Grid.Row="4"
+                    Grid.Column="3"
+                    HorizontalAlignment="Left">
+            <materialDesign:TimePicker VerticalAlignment="Top"
+                                       Width="100"
+                                       HorizontalAlignment="Left"
+                                       Margin="0 16 0 0"
+                                       Style="{StaticResource MaterialDesignFloatingHintTimePicker}"
+                                       materialDesign:HintAssist.Hint="Horario" />
+            <DatePicker Width="100"
+                        HorizontalAlignment="Left"
+                        Margin="0 16 0 0"
+                        materialDesign:HintAssist.Hint="Pick Date"
+                        Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

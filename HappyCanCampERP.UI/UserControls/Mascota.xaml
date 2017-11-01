@@ -1,0 +1,271 @@
+﻿<UserControl x:Class="HappyCanCampERP.UI.UserControls.Mascota"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Margin="16"
+          VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <!--contenido-->
+        <materialDesign:ColorZone Mode="Accent"
+                                  Padding="16"
+                                  Grid.ColumnSpan="12">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}"
+                           Margin="0 6 0 8">Mascota</TextBlock>
+            </StackPanel>
+        </materialDesign:ColorZone>
+        <materialDesign:PackIcon Grid.Row="1"
+                                 Grid.Column="0"
+                                 Kind="StarCircle"
+                                 Foreground="{Binding ElementName=MascotaNombreTextBox, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <TextBox Grid.Row="1"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 x:Name="MascotaNombreTextBox"
+                 materialDesign:HintAssist.Hint="Nombre mascóta"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+            <TextBox.Text>
+                <Binding Path="Mascota">
+
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <materialDesign:PackIcon Grid.Row="1"
+                                 Grid.Column="4"
+                                 Kind="Timer"
+                                 Foreground="{Binding ElementName=TiempoConLaMascota, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <Grid Grid.Row="1"
+              Grid.Column="5"
+              Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <ComboBox Grid.Row="0"
+                      Grid.Column="0"
+                      x:Name="TiempoConLaMascota"
+                      materialDesign:HintAssist.Hint="Tiempo con la mascota"
+                      Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                <!--TO DO-->
+                <!--Para que aparescan todos los numeros hay que hacer una binding a una propiedad
+                que sea un array
+                del view model que al iniciar haga un loop que lo llene de nuemros-->
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+                <ComboBoxItem>6</ComboBoxItem>
+                <ComboBoxItem>7</ComboBoxItem>
+                <ComboBoxItem>8</ComboBoxItem>
+                <ComboBoxItem>9</ComboBoxItem>
+                <ComboBoxItem>10</ComboBoxItem>
+                <ComboBoxItem>11</ComboBoxItem>
+                <ComboBoxItem>12</ComboBoxItem>
+                <ComboBoxItem>13</ComboBoxItem>
+                <ComboBoxItem>14</ComboBoxItem>
+                <ComboBoxItem>15</ComboBoxItem>
+                <ComboBoxItem>16</ComboBoxItem>
+            </ComboBox>
+            <ComboBox Grid.Row="0"
+                      Grid.Column="2"
+                      materialDesign:HintAssist.Hint="Dias/Meses/Años"
+                      Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                <ComboBoxItem>Días</ComboBoxItem>
+                <ComboBoxItem>Semanas</ComboBoxItem>
+                <ComboBoxItem>Meses</ComboBoxItem>
+                <ComboBoxItem>Años</ComboBoxItem>
+            </ComboBox>
+        </Grid>
+        <materialDesign:PackIcon Grid.Row="2"
+                                 Grid.Column="0"
+                                 Kind="GenderMaleFemale"
+                                 Foreground="{Binding ElementName=Genero, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <ComboBox Grid.Row="2"
+                  Grid.Column="1"
+                  x:Name="Genero"
+                  materialDesign:HintAssist.Hint="Género"
+                  Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+            <!--Aunque solo sean dos tal vez seria bueno considerar enlazar esto a una tabla de la base de 
+            datos que se llame generos-->
+            <ComboBoxItem>Hembra</ComboBoxItem>
+            <ComboBoxItem>Macho</ComboBoxItem>
+        </ComboBox>
+        <CheckBox Grid.Row="2"
+                  Grid.Column="3"
+                  Style="{StaticResource MaterialDesignCheckBox}"
+                  Margin="10,0,0,0"
+                  VerticalAlignment="Center">Esterilizado</CheckBox>
+        <materialDesign:PackIcon Grid.Row="2"
+                                 Grid.Column="4"
+                                 Kind="TimerSand"
+                                 Foreground="{Binding ElementName=Edad, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <Grid Grid.Row="2"
+              Grid.Column="5"
+              Grid.ColumnSpan="3"
+              Margin="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <ComboBox Grid.Row="0"
+                      Grid.Column="0"
+                      x:Name="Edad"
+                      materialDesign:HintAssist.Hint="Edad"
+                      Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                <!--TO DO-->
+                <!--Para que aparescan todos los numeros hay que hacer una binding a una propiedad
+                que sea un array
+                del view model que al iniciar haga un loop que lo llene de nuemros-->
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+                <ComboBoxItem>6</ComboBoxItem>
+                <ComboBoxItem>7</ComboBoxItem>
+                <ComboBoxItem>8</ComboBoxItem>
+                <ComboBoxItem>9</ComboBoxItem>
+                <ComboBoxItem>10</ComboBoxItem>
+                <ComboBoxItem>11</ComboBoxItem>
+                <ComboBoxItem>12</ComboBoxItem>
+                <ComboBoxItem>13</ComboBoxItem>
+                <ComboBoxItem>14</ComboBoxItem>
+                <ComboBoxItem>15</ComboBoxItem>
+                <ComboBoxItem>16</ComboBoxItem>
+                <ComboBoxItem>Se desconoce</ComboBoxItem>
+            </ComboBox>
+            <ComboBox Grid.Row="0"
+                      Grid.Column="2"
+                      materialDesign:HintAssist.Hint="Dias/Meses/Años"
+                      Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                <ComboBoxItem>Días</ComboBoxItem>
+                <ComboBoxItem>Semanas</ComboBoxItem>
+                <ComboBoxItem>Meses</ComboBoxItem>
+                <ComboBoxItem>Años</ComboBoxItem>
+            </ComboBox>
+        </Grid>
+        <TextBox Grid.Row="3"
+                 Grid.Column="1"
+                 materialDesign:HintAssist.Hint="Raza"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+
+        <TextBox Grid.Row="3"
+                 Grid.Column="3"
+                 materialDesign:HintAssist.Hint="Pelaje"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        <materialDesign:PackIcon Grid.Row="3"
+                                 Grid.Column="4"
+                                 Kind="FormatListNumbers"
+                                 Foreground="{Binding ElementName=Caracteristicas, Path=BorderBrush}"
+                                 Margin="5,20,5,0"
+                                 RenderTransformOrigin="0.5,0.5">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5"
+                                    ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+        </materialDesign:PackIcon>
+        <TextBox Grid.Row="3"
+                 Grid.Column="5"
+                 Grid.RowSpan="2"
+                 Grid.ColumnSpan="3"
+                 x:Name="Caracteristicas"
+                 Style="{StaticResource MaterialDesignTextAreaTextBox}"
+                 Margin="0"
+                 VerticalAlignment="Bottom"
+                 Height="90"
+                 AcceptsReturn="True"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 materialDesign:HintAssist.Hint="Características"
+                 IsEnabled="True" />
+
+        <!--Estado de salud general-->
+
+        <!--información alimenticioa-->
+
+        <!--Información de prevención-->
+
+        <!--Información de enfermedades-->
+
+    </Grid>
+</UserControl>

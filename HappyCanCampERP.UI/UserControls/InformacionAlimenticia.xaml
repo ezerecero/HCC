@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="HappyCanCampERP.UI.UserControls.InformacionAlimenticia"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controles="clr-namespace:HappyCanCampERP.UI.UserControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <BooleanToVisibilityConverter x:Key="B2V" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Margin="16"
+          VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <!--información alimenticioa-->
+        <materialDesign:ColorZone Grid.Row="0"
+                                  Grid.Column="3"
+                                  Grid.ColumnSpan="3"
+                                  Mode="PrimaryLight"
+                                  Padding="16"
+                                  Margin="0,20,0,0">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <TextBlock VerticalAlignment="Center"
+                           Margin="16 0 0 0">Información alimenticia</TextBlock>
+            </StackPanel>
+        </materialDesign:ColorZone>
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="8"
+                   HorizontalAlignment="Center"
+                   Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                   Margin="0,20,0,10"
+                   VerticalAlignment="Center">¿Que tipo de alimentos come el can?</TextBlock>
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="4">
+            <controles:ToggleButtonConInfo TextoDelToggleButton="Solo alimentos seco (croquetas)"
+                                   TextoDelInfo="Marca" />
+            <controles:ToggleButtonConInfo TextoDelToggleButton="Solo alimentos en lata (húmedo)"
+                                   TextoDelInfo="Marca" />
+        </StackPanel>
+        <StackPanel Grid.Row="2"
+                    Grid.Column="4"
+                    Grid.ColumnSpan="4">
+            <StackPanel Orientation="Horizontal">
+                <ToggleButton Style="{StaticResource MaterialDesignSwitchAccentToggleButton}"
+                              Margin="8,10"
+                              HorizontalAlignment="Left" />
+                <TextBlock x:Name="TextoCheck"
+                           Margin="5,0"
+                           VerticalAlignment="Center">Seco y húmedo</TextBlock>
+            </StackPanel>
+            <controles:ToggleButtonConInfo TextoDelToggleButton="Dieta especial"
+                                   TextoDelInfo="Anotar su dieta aquí" />
+        </StackPanel>
+        <TextBlock  Grid.Row="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="8"
+                    Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                    Margin="0,20,0,10"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">¿Cuantas veces da de comer y que cantidad de alimento?</TextBlock>
+        <StackPanel Grid.Row="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="4">
+            <controles:ToggleButtonConInfo TextoDelToggleButton="Una vez al día"
+                                   TextoDelInfo="Cantidad"></controles:ToggleButtonConInfo>
+            <controles:ToggleButtonConInfo TextoDelToggleButton="Dos veces al día"
+                                   TextoDelInfo="Cantidad"></controles:ToggleButtonConInfo>
+        </StackPanel>
+        <StackPanel Grid.Row="4"
+                    Grid.Column="4"
+                    Grid.ColumnSpan="4">
+            <controles:ToggleButtonConInfo TextoDelToggleButton="Alimento libre"
+                                   TextoDelInfo="Cantidad"></controles:ToggleButtonConInfo>
+            <controles:ToggleButtonConInfo TextoDelToggleButton="Tiene el can premios preferidos"
+                                   TextoDelInfo="Anotarlos aquí"></controles:ToggleButtonConInfo>
+        </StackPanel>
+    </Grid>
+</UserControl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
